@@ -27,6 +27,9 @@ v2=$2
 image1=$repo:$v1
 image2=$repo:$v2
 
+echo "Will compare $image1 and $image2:"
+echo "------------------"
+
 BASEDIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 mkdir -p $BASEDIR/$v1
 mkdir -p $BASEDIR/$v2
