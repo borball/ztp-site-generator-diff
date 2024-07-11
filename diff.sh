@@ -17,7 +17,7 @@ usage(){
   echo "make sure you have pull secret to pull images from redhat registries."
 }
 
-while getopts "f:t:aerh" arg; do
+while getopts "f:t:aerhs" arg; do
   case $arg in
     f)
       echo "Compare version 1: ${OPTARG}"
@@ -38,6 +38,8 @@ while getopts "f:t:aerh" arg; do
     e)
       echo "Compare the examples in the image."
       mode="e"
+      ;;
+    s)
       ;;
     h | *) # Display help.
       usage
