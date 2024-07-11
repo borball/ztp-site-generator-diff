@@ -45,15 +45,15 @@ diff -r --color /root/v4.14.1-5/argocd/README.md /root/v4.14.2-6/argocd/README.m
 or:
 
 ```shell
-# curl -s https://raw.githubusercontent.com/borball/ztp-site-generator-diff/master/diff.sh | bash -s -f v4.14.1-5 -t v4.14.2-6
+# curl -s https://raw.githubusercontent.com/borball/ztp-site-generator-diff/master/diff.sh | bash /dev/stdin -f v4.14.1-5 -t v4.14.2-6
 Compare version 1: v4.14.1-5
 Compare version 2: v4.14.2-6
-diff -r --color /root/v4.14.1-5/argocd/deployment/argocd-openshift-gitops-patch.json /root/v4.14.2-6/argocd/deployment/argocd-openshift-gitops-patch.json
+diff -r --color /dev/v4.14.1-5/argocd/deployment/argocd-openshift-gitops-patch.json /dev/v4.14.2-6/argocd/deployment/argocd-openshift-gitops-patch.json
 43c43
 <           "image": "registry.redhat.io/openshift4/ztp-site-generate-rhel8:v4.14.1"
 ---
 >           "image": "registry.redhat.io/openshift4/ztp-site-generate-rhel8:v4.14.2"
-diff -r --color /root/v4.14.1-5/argocd/README.md /root/v4.14.2-6/argocd/README.md
+diff -r --color /dev/v4.14.1-5/argocd/README.md /dev/v4.14.2-6/argocd/README.md
 11c11
 <     $ podman pull registry.redhat.io/openshift4/ztp-site-generate-rhel8:v4.14.1
 ---
